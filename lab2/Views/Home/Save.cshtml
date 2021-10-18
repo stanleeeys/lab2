@@ -1,0 +1,48 @@
+﻿@model lab2.Models.ViewModels.ViewModelPerson;
+@{
+    ViewData["Title"] = "Save";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h2 class="animate__animated animate__fadeInDown">Credenciales<i class="fas fa-globe"></i></h2>
+
+
+    @using (Html.BeginForm("Save", "Home", FormMethod.Post))
+    {
+
+
+        @Html.LabelFor(n => n.NamePerson) <br />
+        @Html.TextBoxFor(n => n.NamePerson)
+        @Html.ValidationMessageFor(n => n.NamePerson)
+        <br />
+        @Html.LabelFor(n => n.AgePerson)<br />
+        @Html.TextBoxFor(n => n.AgePerson)
+        @Html.ValidationMessageFor(n => n.AgePerson)
+        <br />
+        @Html.LabelFor(n => n.DescriptionPerson)<br />
+        @Html.TextBoxFor(n => n.DescriptionPerson)
+        @Html.ValidationMessageFor(n => n.DescriptionPerson)
+        <br />
+        <br />
+        <br />
+
+        <input type="submit" i class="fas fa-save" /i><i class="fas fa-save"></i>
+
+
+
+    }
+</body>
+</html>
+
+
